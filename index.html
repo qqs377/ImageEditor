@@ -10,6 +10,40 @@
 </head>
 
 <body>  
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"> </script>
+
+<h1>Hide Image</h1>
+
+<canvas id="ocan">
+</canvas>
+<canvas id="hcan">
+</canvas>
+<p>
+Image to Show: <input type="file" multiple="false" accept="image/*" id="ofile" onchange="loadOriginalImage()">
+</p>
+<p>
+Image to Hide: <input type="file" multiple="false" accept="image/*" id="hfile" onchange="loadHideImage()">
+</p>
+<p>
+  <input type="button" value="Hide" onclick="steganography()">
+  <input type="button" value="Clear" onclick="clearHCanvas()">
+</p>
+
+<hr>
+
+<h1>Retrieve Image</h1>
+
+<canvas id="recan">
+</canvas>
+
+<p>
+  <input type="file" id="fput" multiple="false" accept="image/*" onchange="loadRetrieveImage()">
+</p>
+<input type="button" value="Retrieve" onclick="retrieve()">
+<input type="button" value="Clear" onclick="clearRCanvas()">
+
+<hr>
+
 <h1>Grayscale Image</h1>
 
 <canvas id="can">
@@ -24,7 +58,8 @@
   <input type="button" value="upload" onclick="upload()">
 </p>
 <input type="button" value="Make Grayscale" onclick="makeGray()">
-<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"> </script>
+<input type="button" value="Clear" onclick="clearGCanvas()">
+
 
 <hr>
 
@@ -35,7 +70,7 @@
 <canvas id="bgcan">
 </canvas>
 <p>
-Foreground: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()">
+Foreground(with green background): <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()">
 </p>
 <p>
 Background: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()">
@@ -44,6 +79,7 @@ Background: <input type="file" multiple="false" accept="image/*" id="bgfile" onc
   <input type="button" value="Merge" onclick="mergeImages()">
   <input type="button" value="Clear" onclick="clearCanvas()">
 </p>
+
 
   <script src="script.js"></script>
   
