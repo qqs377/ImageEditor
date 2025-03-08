@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Editor</title>
+</head>
+
+<body>  
+<h1>Grayscale Image</h1>
+
+<canvas id="can">
+</canvas>
+
+<canvas id="graycan">
+</canvas>
+
+<p>
+  Filename:
+  <input type="file" id="finput" multiple="false" accept="image/*">
+  <input type="button" value="upload" onclick="upload()">
+</p>
+<input type="button" value="Make Grayscale" onclick="makeGray()">
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"> </script>
+
+<hr>
+
+<h1>Merge Image</h1>
+
+<canvas id="fgcan">
+</canvas>
+<canvas id="bgcan">
+</canvas>
+<p>
+Foreground: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()">
+</p>
+<p>
+Background: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()">
+</p>
+<p>
+  <input type="button" value="Merge" onclick="mergeImages()">
+  <input type="button" value="Clear" onclick="clearCanvas()">
+</p>
+
+</body>
+</html>
